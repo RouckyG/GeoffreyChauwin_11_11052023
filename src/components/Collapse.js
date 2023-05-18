@@ -1,32 +1,21 @@
-import React from "react";
-import { useState } from "react";
+import React, { Children } from "react";
+import { useState, useEffect } from "react";
 
 const Collapse = (props) => {
 
     let [isDisplayed, setIsDisplayed] = useState(false);
 
-    let content;
-
-    if(typeof props.collapseContent === "string"){
-        content = props.collapseContent;
-    }
-    else{
-        content = props.collapseContent.map((line) => {return <p>{line}</p>});
-    }
-
-    return <div className="collapse">
+    return <section className="collapse">
         <div className="collapseTitle" onClick={()=>setIsDisplayed(!isDisplayed)}>
-            <p>
+            <h2>
                 {props.collapseTitle}
-            </p>
-            <span>
-v
-            </span>
+            </h2>
+            <i className={isDisplayed ? "fa fa-chevron-down" : "fa fa-chevron-up"} />
         </div>
-        {isDisplayed ? <div className="collapseContent">
-            {content}
-        </div> : ""}
-    </div>
+        <div className="collapseContent" style={{display: isDisplayed ? "block" : "none"}}>
+            {props.children}
+        </div>
+    </section>
 }
 
 export default Collapse

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
+*{
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -89,6 +93,7 @@ footer {
   height: 175px;
   background-color: #000000;
   color: #FFFFFF;
+  margin-top: 50px;
 }
 
 /* Banner */
@@ -124,27 +129,51 @@ footer {
 /* Collapse */
 
 .collapse {
-  width: 90%;
+  width: 75%;
+  margin-bottom: 20px;
 }
 
 .collapseTitle {
+  position: relative;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 45px;
   padding: 0 20px 0 20px;
   border-radius: 5px;
+  background-color: #FF6060;
+  color : #FFFFFF;
+  cursor: pointer;
+}
+
+.collapseTitle h2, i {
   font-size: 24px;
   font-weight: 500;
-  color : #FFFFFF;
-  background-color: #FF6060;
 }
 
 .collapseContent {
-  padding-top : 30px;
+  overflow: hidden;
+  margin-top: -10px;
+  padding : 30px 20px 10px 20px;
   width: 100%;
   border-radius: 5px;
   background-color: #F6F6F6;
+}
+
+.collapseContent p {
+  margin: 5px 0;
+  font-size: 24px;
+  color: #FF6060;
+}
+
+/* About */
+
+.aboutPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Error */
