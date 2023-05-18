@@ -30,12 +30,15 @@ const Home = (props) => {
 
     return <>
         <Banner banner={bannerPicture} text="Chez vous, partout et ailleurs"/>
-        {
-            locations && locations.map((location) => {
-                return <Card id={location.id} picture={location.cover} title={location.title}></Card>
-            })
-        }
-            <Card picture={""} title={""}></Card>
+        <ul className="locationCards">
+            {
+                locations && locations.map((location) => {
+                    return <li>
+                        <Card id={location.id} picture={location.cover} title={location.title}/>
+                    </li>
+                })
+            }
+        </ul>
     </>
 }
 
