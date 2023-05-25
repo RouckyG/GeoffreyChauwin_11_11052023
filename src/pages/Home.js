@@ -10,6 +10,7 @@ const Home = (props) => {
 
   //async function that will call the JSON file to set the properties list into state
   const getLocations = async () => {
+    
     const response = await fetch('data/locations.json')
       .then((response) => {
         return response.json();
@@ -17,18 +18,15 @@ const Home = (props) => {
       .catch((err) => {
         console.log(err);
       });
-    console.log(response)
 
       setLocations(response);
   };
 
   useEffect(() => {
-    console.log(locations)
     getLocations();
-    console.log(locations)
 }, []);
 
-    return <>
+    return <div className="homePage">
         <Banner banner={bannerPicture} text="Chez vous, partout et ailleurs"/>
         <ul className="locationCards">
             {
@@ -39,7 +37,7 @@ const Home = (props) => {
                 })
             }
         </ul>
-    </>
+    </div>
 }
 
 export default Home
