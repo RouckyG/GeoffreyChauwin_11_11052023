@@ -8,7 +8,7 @@ const Collapse = (props) => {
     return <section className="collapse">
         <div className="collapseTitle" onClick={()=>setIsDisplayed(!isDisplayed)}>
             <h2>
-                {props.collapseTitle}
+                {props.title}
             </h2>
             <i className={isDisplayed ? "fa fa-chevron-down" : "fa fa-chevron-up"} />
         </div>

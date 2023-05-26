@@ -257,6 +257,35 @@ footer {
   padding: 0 16px;
 }
 
+.currentSlide {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #000000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Tags */
+
+.tags {
+  display: flex;
+}
+
+.tags li {
+  text-align: center;
+  margin-right: 10px;
+  padding: 5px 25px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: #FFFFFF;
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 /* Location */
 
 .locationPage {
