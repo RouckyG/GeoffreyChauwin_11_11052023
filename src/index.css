@@ -70,14 +70,20 @@ header {
 	text-decoration: underline;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
   .navbar {
     width: 40%;
   }
 
-  .navbar>a {
+  .navbar a {
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:426px) {
+  .navbar a {
     font-size: 12px;
   }
 }
@@ -102,7 +108,7 @@ footer {
   position: relative;
   background-color: #000000;
   height: 223px;
-  width: 95%;
+  width: 90%;
   border-radius: 25px;
   text-align: center;
   margin-bottom: 40px;
@@ -124,6 +130,31 @@ footer {
   font-size: 48px;
   font-weight: 500;
   color : #FFFFFF;
+}
+
+@media screen and (max-width:768px) {
+  .bannerText {
+    width: 450px;
+  }
+}
+
+
+@media screen and (max-width:426px) {
+  
+  .banner {
+    height: 130px;
+  }
+
+  .bannerPicture {
+  height: 130px;
+  }
+
+  .bannerText {
+    left: 35%;
+    width: 225px;
+    font-size: 24px;
+    text-align: left;
+  }
 }
 
 /* Card */
@@ -160,6 +191,34 @@ footer {
   text-decoration: none;
   color: #FFFFFF;
   margin: 0
+}
+
+@media screen and (max-width:768px) {
+
+  .card {
+    height: 275px;
+    width: 275px;
+  }
+
+  .cardPicture {
+    height: 275px;
+    width: 275px;
+  }
+
+}
+
+@media screen and (max-width:426px) {
+
+  .card {
+    height: 225px;
+    width: 100%;
+  }
+
+  .cardPicture {
+    height: 225px;
+    width: 100%;
+  }
+
 }
 
 /* Collapse */
@@ -202,6 +261,20 @@ footer {
   color: #FF6060;
 }
 
+@media screen and (max-width:426px) {
+  .collapseTitle h2, i {
+    font-size: 13px;
+  }
+  
+  .collapseContent {
+    padding : 20px 20px 10px 20px;
+  }
+
+  .collapseContent p {
+    font-size: 12px;
+  }
+}
+
 /* Home */
 
 .homePage {
@@ -217,6 +290,7 @@ footer {
   border-radius: 25px;
   background-color: #F7F7F7;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -225,9 +299,25 @@ footer {
   list-style-type: none;
   justify-content: center;
   align-items: center;
-  height: 340px;
   margin-bottom: 50px;
   flex-basis: 33.33%;
+}
+
+@media screen and (max-width:426px) {
+
+  .locationCards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+  }
+
+  .locationCards li {
+    margin-bottom: 20px;
+    flex-basis: auto;
+    width: 100%;
+  }
 }
 
 /* Carrousel */
@@ -268,13 +358,25 @@ footer {
   font-weight: 500;
 }
 
+@media screen and (max-width:426px) {
+
+  .carrousel {
+    height: 300px;
+  }
+
+}
+
 /* Tags */
 
 .tags {
   display: flex;
+  padding: 0;
+  width: 80%;
 }
 
 .tags li {
+  display: flex;
+  align-items: center;
   text-align: center;
   margin-right: 10px;
   padding: 5px 25px;
@@ -286,6 +388,12 @@ footer {
   font-weight: 500;
 }
 
+@media screen and (max-width:426px) {
+  .tags li{
+    font-size: 10px;
+  }
+}
+
 /* Location */
 
 .locationPage {
@@ -295,13 +403,106 @@ footer {
   align-items: center;
 }
 
-.locationPage .banner {
+.locationDetails {
+  display: flex;
+  justify-content: space-between;
   width: 90%;
-  height: 400px;
-  border-radius: 25px;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
+.locationTitle {
+  width: 80%;
+  color: #FF6060;
+}
+
+.locationTitle h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 40px 0 10px 0;
+}
+
+.locationTitle h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.locationHost {
+  display: flex;
+  align-items: center;
+}
+
+.locationHost h3 {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  margin: 0 10px;
+}
+
+.locationHost img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.rating svg {
+  margin-right: 5px;
+}
+
+.locationDetails .collapse {
+  width: 48%;
+}
+
+@media screen and (max-width:768px) {
+
+  .locationTitle, .tags {
+    width: 100%;
+    order: 1;
+  }
+
+  .rating {
+    align-self: center;
+    width: 50%;
+    margin-bottom: 20px;
+    order: 1;
+  }
+
+  .rating svg {
+    width: 13px;
+  }
+
+  .locationHost {
+    margin-bottom: 20px;
+    order: 2
+  }
+
+  .locationHost h3 {
+    font-size: 12px;
+  }
+
+  .locationHost img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .locationDetails .collapse {
+    width: 100%;
+    order: 3;
+  }
+}
+
+@media screen and (max-width:426px) {
+
+  .locationTitle h2 {
+    margin: 20px 0 5px 0;
+    font-size: 18px;
+  }
+
+  .locationTitle h3 {
+    font-size: 12px;
+  }
+}
 /* About */
 
 .aboutPage {
@@ -337,4 +538,33 @@ footer {
   font-weight: 500;
   font-size: 18px;
   color: #FF6060;
+}
+
+@media screen and (max-width:768px) {
+
+  .errorPage {
+    height: 100%;
+  }
+
+  .errorTitle {
+    font-size: 190px;
+  }
+  
+  .errorText {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:426px) {
+
+  .errorTitle {
+    font-size: 150px;
+  }
+
+  .errorText {
+    width: 90%;
+    font-size: 24px;
+    text-align: center;
+  }
 }
