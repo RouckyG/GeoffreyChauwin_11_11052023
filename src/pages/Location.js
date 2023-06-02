@@ -66,7 +66,7 @@ const Location = (props) => {
                 <p>{location.description}</p>
                 </Collapse>
                 <Collapse title="Équipements">
-                    {location.equipments.map((equipment)=> {return <p>{equipment}</p>})}
+                    {location.equipments.map((equipment, index)=> {return <p key={index}>{equipment}</p>})}
                 </Collapse>
             </article>
         </>

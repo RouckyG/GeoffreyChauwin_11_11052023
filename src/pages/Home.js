@@ -30,8 +30,8 @@ const Home = (props) => {
         <Banner banner={bannerPicture} text="Chez vous, partout et ailleurs"/>
         <ul className="locationCards">
             {
-                locations && locations.map((location) => {
-                    return <li>
+                locations && locations.map((location, index) => {
+                    return <li key={index}>
                         <Card id={location.id} picture={location.cover} title={location.title}/>
                     </li>
                 })
