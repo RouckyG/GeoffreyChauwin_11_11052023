@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import Carrousel from "../components/Carrousel";
-import Tags from "../components/Tags";
+import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 
@@ -60,10 +60,12 @@ const Location = (props) => {
                     </h3>
                     <img src={location.host.picture} alt={"photo de profil de " + location.host.name}/>
                 </div>
-                <Tags tags={location.tags} />
+                <ul className='tags'>
+                    {location.tags.map((tag, index)=>{ return <Tag index={index}>{tag}</Tag> })}
+                </ul>
                 <Rating rating={location.rating} />
                 <Collapse title="Description">
-                <p>{location.description}</p>
+                    <p>{location.description}</p>
                 </Collapse>
                 <Collapse title="Équipements">
                     {location.equipments.map((equipment, index)=> {return <p key={index}>{equipment}</p>})}
